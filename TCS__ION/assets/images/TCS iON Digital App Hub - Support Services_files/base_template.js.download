@@ -1,0 +1,1141 @@
+var windowHeight; var footerHeight; var footerTop;
+
+function setFooter() {
+	if (footerTop < windowHeight) {
+		windowHeight = $(window).height();
+		footerHeight = $('.footer-templ').height();
+		footerTop = $('.footer-templ').position().top + footerHeight;
+		$('.footer-templ').css('margin-top', (windowHeight - footerTop) + 'px');
+	}
+}
+
+$(document).ready(function () {
+	// drop down in header starts
+	$("#get-selected").text("Products");
+	$('.value-selected').click(function () {
+		var selected_value = $(this).html();
+		$("#get-selected").text(selected_value);
+	});
+	// drop down in header ends
+
+	//Tooltip change functionality starts
+	$(".tickMark").on("click", function () {
+		$(this).addClass("active");
+		$(this).attr('title', 'Job Saved')
+			.tooltip('fixTitle')
+			.tooltip('show');
+	});
+	//Tooltip change functionality ends
+	//Ellipses on 2nd line JS starts
+	// $().vEllipsis({
+	// 	'lines': 2,
+	// 	'responsive': true
+	// });
+	//Ellipses on 2nd line JS ends
+
+	new WOW().init();
+	// Sticky Footer
+	setFooter();
+	$(window).resize(function () {
+		setFooter();
+	});
+	// Sticky Footer
+
+	//Right Floater
+	setTimeout(function () {
+		$(".marketplace-wrp").append('<div class="floaterCont"><div class="sideFlotrCont"><div class="sideIcon-1 sideFlotr"><div class="iconSvg inline-block media-middle"></div><div class="inline-block valign_middle"><div class="fontsize13">Frequent Asked Questions</div></div></div><div class="sideIcon-2 sideFlotr"><div class="iconSvg inline-block media-middle marginrgt5"></div><div class="inline-block valign_middle"><div class="fontsize13">Have an Idea?</div></div></div><div class="sideIcon-3 sideFlotr"><div class="iconSvg inline-block media-middle marginrgt5"></div><div class="inline-block valign_middle"><div class="fontsize13">Write to us</div></div></div><div class="sideIcon-4 sideFlotr"><div class="iconSvg inline-block media-middle marginrht-3"></div><div class="inline-block valign_middle"><div class="fontsize13">Call us : 1800-209-6030</div></div></div><div class="sideIcon-5 sideFlotr "><div class="iconSvg inline-block media-middle marginrgt5"></div><div class="inline-block valign_middle"><div class="fontsize13">Chat with us</div></div></div></div><div class="floaterIcon" data-tooltip="tooltip" title="Floater Icons"><span></span></div></div><div class="floatoverlayBg"></div>');
+	}, 300);
+	$(document).on("click", ".floaterIcon", function (e) {
+		$(this).parents(".floaterCont").toggleClass("active");
+		$(".sideFlotrCont").css("display", "block");
+		$(".floatoverlayBg").toggle();
+	});
+	$(document).on("click", ".floatoverlayBg", function (e) {
+		$(".floaterCont").toggleClass("active");
+		$(".sideFlotrCont").css("display", "none");
+		$(this).hide();
+	});
+	//Right Floater
+
+
+	// =========== Header JS code starts from here ===========
+	// small role icons width in mobile view
+	$(".nav-toggle").click(function () {
+		setTimeout(function () {
+			var tabWidth = $(".mm-panel").width();
+			var smallwidth = tabWidth / 4;
+			$(".role_selections .tab").width(tabWidth - 17);
+			$(".role_selections  .tab button").css("width", smallwidth - 5);
+		}, 300)
+	});
+	$('.organization_scrollbar').slimscroll({
+		height: '80px',
+		color: '#00abe1',
+		wheelStep: 10,
+		touchScrollStep: 50,
+		alwaysVisible: true,
+		railVisible: true,
+		railOpacity: 0.3,
+		allowPageScroll: false,
+		disableFadeOut: false
+	});
+	$('.scroll_bar_row').slimscroll({
+		height: '300px',
+		color: '#00abe1',
+		wheelStep: 10,
+		touchScrollStep: 50,
+		alwaysVisible: true,
+		railVisible: true,
+		railOpacity: 0.3,
+		allowPageScroll: false,
+		disableFadeOut: false
+	});
+
+	$('.tab button.active').addClass('semibold');
+
+	$('.change_organization').on('click', function () {
+		var selected_text = $('#selected_company').text();
+		$('.selected_organization li').each(function () {
+			if ($(this).text() == selected_text) {
+				$(this).addClass('mm-selected');
+			}
+		});
+	});
+	$('.selected_organization  li a').on('click', function () {
+		$(this).parent().addClass('mm-selected').siblings().removeClass('mm-selected');
+		$('#selected_company').text($(this).text());
+
+	});
+
+	// clicking on role in desktop starts here
+	$('.tablinks').click(function () {
+		var cityName = $(this).text();
+		// change upper title role starts
+		$('.multiple').text(cityName);
+		// change upper title role ends
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		var ID = '#' + $.trim(cityName);
+		$(ID).css({ 'display': 'block' });
+		$(this).addClass('active');
+	});
+
+	// Get the element with id="defaultOpen" and click on it
+	// document.getElementById("defaultOpen").click();
+	// clicking on role in desktop ends here
+
+	// clicking on role in mobile starts here
+	$('.smalltablinks').click(function () {
+		var cityname = $(this).text().trim();
+		// change upper title role starts
+		$('#role_info').text(cityname);
+		// change upper title role ends
+		if (cityname == 'Learner') {
+			$('.change_organization').hide();
+			$(".single_organization").hide();
+		}
+		else {
+			$('.change_organization').show();
+			$(".single_organization").hide();
+		}
+		// cityname = $(this).text().toLowerCase();
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("smalltabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("smalltablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		$(this).addClass('active');
+		$(this).siblings().removeClass('active');
+	});
+	// Get the element with id="defaultSmallOpen" and click on it
+	document.getElementById("defaultSmallOpen").click();
+	// clicking on role in mobile ends here
+
+
+
+	// header on page scroll starts
+
+	$(window).scroll(function () {
+		var scrollerTop = $(window).scrollTop();
+		if (scrollerTop >= 200) {
+			$('.additionalbar_header').slideUp(300);
+			$(".scroll_top").show();
+		}
+		else {
+			$('.additionalbar_header').slideDown(300);
+			$(".scroll_top").hide();
+		}
+	});
+
+
+	// var arr = ["part1", "part2", "part3", "part4", "part5", "part6"];
+	var arr = [];
+	$('#headerContentLinks li a').each(function () {
+		arr.push($(this).attr("data-hashid"));
+	});
+	$(window).scroll(function () {
+		var scrollerTop = $(window).scrollTop();
+		if ($(window).width() > 991) {
+
+			if (scrollerTop >= 400) {
+
+				$('.courseNav').addClass('show')
+			}
+			else {
+
+				$('.courseNav').removeClass('show')
+
+			}
+			var y_scroll_pos = window.pageYOffset;
+			// set to whatever you want it to be
+			jQuery.each(arr, function (i, val) {
+				var scroll_pos_test = $("#" + val).offset().top - 80;
+				var scroll_pos_testh = $("#" + val).offset().top + $("#" + val).height() - 50;
+				if (scrollerTop >= scroll_pos_test && scrollerTop <= scroll_pos_testh) {
+					var url = "#" + val
+					var a = $('.courselist_link').has('a[href="' + url + '"]');
+					$('.courselist_link').removeClass('courselist_activelink')
+					a.addClass('courselist_activelink')
+					return;
+				}
+			});
+		}
+	})
+
+	$('.courseNav ul a').click(function () {
+		$('.courselist_link').removeClass('courselist_activelink')
+		$(this).parent('.courselist_link').addClass('courselist_activelink')
+
+		$('html, body').animate({
+			scrollTop: $($.attr(this, 'href')).offset().top - 50
+
+		}, 500);
+		return false;
+	});
+	// header on page scroll ends
+
+
+	// Language Open Dropdown
+
+	$(".hdr_lan").on('click', function () {
+		$(this).parents(".header_language").find(".langdropdown").toggle();
+	})
+
+
+	$(document).on("click", ".langdropdown li", function () {
+		var $this = $(this).find('.eng_lang');
+		$this.parents('.header_language').find('.hdr_lan .lang_name').text($this.text());
+		$(".langdropdown").hide();
+
+		$(".langdropdown li").removeClass("langselected");
+
+		$(this).addClass("langselected");
+
+	})
+
+	$(document).bind("click touchstart", function (e) {
+		if (!$(e.target).parents().children().hasClass('langdropdown')) {
+			$(".langdropdown").hide();
+		}
+	})
+
+
+
+
+	$('[data-tooltip="tooltip"]').tooltip({
+		trigger: 'hover'
+	});
+	$('#menu').css('visibility', 'visible');
+
+	/*jQuery menu aim */
+
+	(function ($) {
+
+		$.fn.menuAim = function (opts) {
+			// Initialize menu-aim for all elements in jQuery collection
+			this.each(function () {
+				init.call(this, opts);
+			});
+
+			return this;
+		};
+
+		function init(opts) {
+			var $menu = $(this),
+				activeRow = null,
+				mouseLocs = [],
+				lastDelayLoc = null,
+				timeoutId = null,
+				options = $.extend({
+					rowSelector: "> li",
+					submenuSelector: "*",
+					submenuDirection: "right",
+					tolerance: 75,  // bigger = more forgivey when entering submenu
+					enter: $.noop,
+					exit: $.noop,
+					activate: $.noop,
+					deactivate: $.noop,
+					exitMenu: $.noop
+				}, opts);
+
+			var MOUSE_LOCS_TRACKED = 3,  // number of past mouse locations to track
+				DELAY = 300;  // ms delay when user appears to be entering submenu
+
+
+			var mousemoveDocument = function (e) {
+				mouseLocs.push({ x: e.pageX, y: e.pageY });
+
+				if (mouseLocs.length > MOUSE_LOCS_TRACKED) {
+					mouseLocs.shift();
+				}
+			};
+
+			/**
+			 * Cancel possible row activations when leaving the menu entirely
+			 */
+			var mouseleaveMenu = function () {
+				if (timeoutId) {
+					clearTimeout(timeoutId);
+				}
+
+				// If exitMenu is supplied and returns true, deactivate the
+				// currently active row on menu exit.
+				if (options.exitMenu(this)) {
+					if (activeRow) {
+						options.deactivate(activeRow);
+					}
+
+					activeRow = null;
+				}
+			};
+
+			/**
+			 * Trigger a possible row activation whenever entering a new row.
+			 */
+			var mouseenterRow = function () {
+				if (timeoutId) {
+					// Cancel any previous activation delays
+					clearTimeout(timeoutId);
+				}
+
+				options.enter(this);
+				possiblyActivate(this);
+			},
+				mouseleaveRow = function () {
+					options.exit(this);
+				};
+
+			/*
+			 * Immediately activate a row if the user clicks on it.
+			 */
+			var clickRow = function () {
+				activate(this);
+			};
+
+			/**
+			 * Activate a menu row.
+			 */
+			var activate = function (row) {
+				if (row == activeRow) {
+					return;
+				}
+
+				if (activeRow) {
+					options.deactivate(activeRow);
+				}
+
+				options.activate(row);
+				activeRow = row;
+			};
+
+
+			var possiblyActivate = function (row) {
+				var delay = activationDelay();
+
+				if (delay) {
+					timeoutId = setTimeout(function () {
+						possiblyActivate(row);
+					}, delay);
+				} else {
+					activate(row);
+				}
+			};
+
+
+			var activationDelay = function () {
+				if (!activeRow || !$(activeRow).is(options.submenuSelector)) {
+					// If there is no other submenu row already active, then
+					// go ahead and activate immediately.
+					return 0;
+				}
+
+				var offset = $menu.offset(),
+					upperLeft = {
+						x: offset.left,
+						y: offset.top - options.tolerance
+					},
+					upperRight = {
+						x: offset.left + $menu.outerWidth(),
+						y: upperLeft.y
+					},
+					lowerLeft = {
+						x: offset.left,
+						y: offset.top + $menu.outerHeight() + options.tolerance
+					},
+					lowerRight = {
+						x: offset.left + $menu.outerWidth(),
+						y: lowerLeft.y
+					},
+					loc = mouseLocs[mouseLocs.length - 1],
+					prevLoc = mouseLocs[0];
+
+				if (!loc) {
+					return 0;
+				}
+
+				if (!prevLoc) {
+					prevLoc = loc;
+				}
+
+				if (prevLoc.x < offset.left || prevLoc.x > lowerRight.x ||
+					prevLoc.y < offset.top || prevLoc.y > lowerRight.y) {
+					// If the previous mouse location was outside of the entire
+					// menu's bounds, immediately activate.
+					return 0;
+				}
+
+				if (lastDelayLoc &&
+					loc.x == lastDelayLoc.x && loc.y == lastDelayLoc.y) {
+					// If the mouse hasn't moved since the last time we checked
+					// for activation status, immediately activate.
+					return 0;
+				}
+
+
+				function slope(a, b) {
+					return (b.y - a.y) / (b.x - a.x);
+				};
+
+				var decreasingCorner = upperRight,
+					increasingCorner = lowerRight;
+
+
+				if (options.submenuDirection == "left") {
+					decreasingCorner = lowerLeft;
+					increasingCorner = upperLeft;
+				} else if (options.submenuDirection == "below") {
+					decreasingCorner = lowerRight;
+					increasingCorner = lowerLeft;
+				} else if (options.submenuDirection == "above") {
+					decreasingCorner = upperLeft;
+					increasingCorner = upperRight;
+				}
+
+				var decreasingSlope = slope(loc, decreasingCorner),
+					increasingSlope = slope(loc, increasingCorner),
+					prevDecreasingSlope = slope(prevLoc, decreasingCorner),
+					prevIncreasingSlope = slope(prevLoc, increasingCorner);
+
+				if (decreasingSlope < prevDecreasingSlope &&
+					increasingSlope > prevIncreasingSlope) {
+
+					lastDelayLoc = loc;
+					return DELAY;
+				}
+
+				lastDelayLoc = null;
+				return 0;
+			};
+
+			/**
+			 * Hook up initial menu events
+			 */
+			$menu
+				.mouseleave(mouseleaveMenu)
+				.find(options.rowSelector)
+				.mouseenter(mouseenterRow)
+				.mouseleave(mouseleaveRow)
+				.click(clickRow);
+
+			$(document).mousemove(mousemoveDocument);
+
+		};
+	})(jQuery);
+
+	$(document).ready(function () {
+
+		//Progressive Lazy load starts
+		// setTimeout(function () {
+		// 	$('.owl-carousel .owl-item').each(function () {
+		// 		if (!($(this).hasClass('active'))) {
+		// 			$(this).find('img').removeClass('lazy');
+		// 			$(this).find('img').addClass('owl-lazy');
+		// 		}
+		// 	});
+		// }, 1000);
+
+		// $('.lazy').lazy();
+		//Progressive Lazy load ends
+
+
+		$('.lernerlist .course-title').each(function () {
+			var text = this.innerHTML;
+			var length = text.length;
+			var stripHere = 80;
+
+			if (length > stripHere + 5) {
+
+				var text = text.substring(0, stripHere) + "...";
+
+				$(this).html(text);
+			}
+
+		});
+
+		$('.lernerlist h3.removemargin').each(function () {
+			var text = this.innerHTML;
+			var length = text.length;
+			var stripHere = 65;
+
+			if (length > stripHere + 5) {
+
+				var text = text.substring(0, stripHere) + "...";
+
+				$(this).html(text);
+			}
+
+
+
+
+		});
+
+		if ($(window).width() > 992) {
+
+			var $menu = $(".dropdown-menu");
+
+
+			function activateSubmenu(row) {
+				var $row = $(row),
+					submenuId = $row.data("submenuId"),
+					$submenu = $("#" + submenuId),
+					height = $menu.outerHeight(),
+					width = $menu.outerWidth();
+
+				// Show the submenu
+				$submenu.css({
+					display: "block",
+					top: -2,
+					left: 206  // main should overlay submenu
+
+				});
+
+				// Keep the currently activated row's highlighted look
+				$row.find("a").addClass("maintainHover spc_hover");
+			}
+
+			function deactivateSubmenu(row) {
+				var $row = $(row),
+					submenuId = $row.data("submenuId"),
+					$submenu = $("#" + submenuId);
+
+				// Hide the submenu and remove the row's highlighted look
+				$submenu.css("display", "none");
+				$row.find("a").removeClass("maintainHover spc_hover");
+			}
+
+			$menu.menuAim({
+				activate: activateSubmenu,
+				deactivate: deactivateSubmenu
+			});
+
+			$(document).on('click', '.headNav li a.distributorClass ~ .subdropdown_menu>li a', function () {
+				$(".distributorClass>span.distribNm").text($(this).text());
+
+				if ($(this).hasClass("learnerDv")) {
+					$(".learnerDv").parents(".cart_display").find(".distributorClass").next("span.mySubscb").empty();
+				}
+
+			});
+
+			$(document).on('click', '.organisationList ul.catlisting li a', function () {
+				$("a#Assessments + span.mySubscb").text($(this).text());
+				$('#distributerOrg').modal('hide');
+			});
+
+
+			$('.drpdwnTabshow').on('touchstart', function () {
+				$('.header_right_drpdown').show();
+			})
+
+			$(document).click(function () {
+				// Simply hide the submenu on any click. Again, this is just a hacked
+				// together menu/submenu structure to show the use of jQuery-menu-aim.
+				$(".popover").css("display", "none");
+				$("a.maintainHover").removeClass("maintainHover spc_hover");
+			});
+			$(".courseMenu_drop").mouseleave(function () {
+				// Simply hide the submenu on any click. Again, this is just a hacked
+				// together menu/submenu structure to show the use of jQuery-menu-aim.
+				$(".popover").css("display", "none");
+				$("a.maintainHover").removeClass("maintainHover spc_hover");
+			});
+
+		}
+
+		//ELLIPSIS
+
+		(function (a) {
+			if (typeof define === "function" && define.amd) {
+				define(["jquery"], a)
+			} else {
+				a(jQuery)
+			}
+		}(function (d) {
+			var c = "ellipsis",
+				b = '<span style="white-space: nowrap;">',
+				e = {
+					lines: "auto",
+					ellipClass: "ellip",
+					responsive: false
+				};
+
+			function a(h, q) {
+				var m = this,
+					w = 0,
+					g = [],
+					k, p, i, f, j, n, s;
+				m.$cont = d(h);
+				m.opts = d.extend({}, e, q);
+
+				function o() {
+					m.text = m.$cont.text();
+					m.opts.ellipLineClass = m.opts.ellipClass + "-line";
+					m.$el = d('<span class="' + m.opts.ellipClass + '" />');
+					m.$el.text(m.text);
+					m.$cont.empty().append(m.$el);
+					t()
+				}
+
+				function t() {
+					if (typeof m.opts.lines === "number" && m.opts.lines < 2) {
+						m.$el.addClass(m.opts.ellipLineClass);
+						return
+					}
+					n = m.$cont.height();
+					if (m.opts.lines === "auto" && m.$el.prop("scrollHeight") <= n) {
+						return
+					}
+					if (!k) {
+						return
+					}
+					s = d.trim(m.text).split(/\s+/);
+					m.$el.html(b + s.join("</span> " + b) + "</span>");
+					m.$el.find("span").each(k);
+					if (p != null) {
+						u(p)
+					}
+				}
+
+				function u(x) {
+					s[x] = '<span class="' + m.opts.ellipLineClass + '">' + s[x];
+					s.push("</span>");
+					m.$el.html(s.join(" "))
+				}
+				if (m.opts.lines === "auto") {
+					var r = function (y, A) {
+						var x = d(A),
+							z = x.position().top;
+						j = j || x.height();
+						if (z === f) {
+							g[w].push(x)
+						} else {
+							f = z;
+							w += 1;
+							g[w] = [x]
+						}
+						if (z + j > n) {
+							p = y - g[w - 1].length;
+							return false
+						}
+					};
+					k = r
+				}
+				if (typeof m.opts.lines === "number" && m.opts.lines > 1) {
+					var l = function (y, A) {
+						var x = d(A),
+							z = x.position().top;
+						if (z !== f) {
+							f = z;
+							w += 1
+						}
+						if (w === m.opts.lines) {
+							p = y;
+							return false
+						}
+					};
+					k = l
+				}
+				if (m.opts.responsive) {
+					var v = function () {
+						g = [];
+						w = 0;
+						f = null;
+						p = null;
+						m.$el.html(m.text);
+						clearTimeout(i);
+						i = setTimeout(t, 100)
+					};
+					d(window).on("resize." + c, v)
+				}
+				o()
+			}
+			d.fn[c] = function (f) {
+				return this.each(function () {
+					try {
+						d(this).data(c, (new a(this, f)))
+					} catch (g) {
+						if (window.console) {
+							console.error(c + ": " + g)
+						}
+					}
+				})
+			}
+		}));
+
+		$('.jobDesc h5').ellipsis({
+			lines: 1
+		});
+
+		$('.jobDesc .posterComp').ellipsis({
+			lines: 1
+		});
+
+		$('.applied_offers_val').ellipsis({
+			lines: 2
+		});
+		//ELLIPSIS ENDS
+
+	});
+
+
+	$(function () {
+
+		//Mobile menu starts
+		$('nav#menu').mmenu({
+			"offCanvas": { "position": "right" },
+			navbar: {
+				title: "",
+
+			},
+			zposition: "front",
+
+
+		});
+
+		var api = $('nav#menu').data("mmenu");
+		api.bind("openPanel", function ($panel) {
+
+		});
+
+
+
+		api.bind('closed', function () {
+			$(".nav-toggle").removeClass("active");
+		});
+
+
+		// document.querySelector(".nav-toggle")
+		// 	.addEventListener("click", function () {
+
+		// 		$(".nav-toggle").addClass("active");
+		// 		$("#menu ul").css("display", "block");
+		// 	});
+
+		$(document).on('click', '.mmMenumain.active', function () {
+			api.closeAllPanels($("#my-panel"));
+		});
+		$(document).on('click', '.openModal', function () {
+			api.close();
+		})
+
+		var count = 0;
+		$(document).on('click', '.nav-toggle', function () {
+			api.close();
+
+			if (count <= 0) {
+				$(".mmenuTabs").after('<div class="mm-panel mm-hasnavbar mm-highest mm-current mm-opened spacePanel displaynone" id="mysubscribe"><ul class="mm-listview"><li><a href="javascript:void(0);">Courses</a></li><li><a href="javascript:void(0);">Online Assessments</a></li><li><a href="javascript:void(0);">Communities</a></li><li><a href="javascript:void(0);">Question Paper</a></li><li><a href="javascript:void(0);">Digital Assessments</a></li><li><a href="javascript:void(0);">Reference Material</a></li></ul></div><div class="mm-panel mm-hasnavbar mm-highest mm-current mm-opened spacePanel displaynone" id="myproducts"><ul class="mm-listview"><li><a href="javascript:void(0);">Product 1</a></li><li><a href="javascript:void(0);">Product 2</a></li><li><a href="javascript:void(0);">Product 3</a></li><li><a href="javascript:void(0);">Product 4</a></li><li><a href="javascript:void(0);">Product 5</a></li><li><a href="javascript:void(0);">Product 6</a></li></ul></div>');
+				count++;
+			}
+
+		})
+		//Mobile menu ends
+
+		//new change
+
+		$('#loginmodal').on('show.bs.modal', function () {
+			$('.hubPopups').css('padding-left', '0');
+			$('.marketplace-wrp').css('padding-right', '0');
+
+		});
+
+		$('#signUpmodal').on('show.bs.modal', function () {
+			$('.hubPopups').css('padding-left', '0');
+			$('.marketplace-wrp').css('padding-right', '0');
+
+
+			setTimeout(function () {
+				if ($(".salutationDiv").is(":hidden") || !$(".hubPopups").find(".salutationDiv")) {
+					$(".nameDivwid").removeClass("col-md-5").addClass("col-md-6");
+					$(".toggleSwitch").removeClass("col-md-5,col-md-7").addClass("col-md-6");
+				}
+			}, 200);
+
+
+		})
+		$('#privacyPolicymodal').on('show.bs.modal', function () {
+			$('.hubPopups').css('padding-left', '0');
+			$('.marketplace-wrp').css('padding-right', '0');
+
+		});
+		$('#loginmodal,#signUpmodal').on('hide.bs.modal', function () {
+			$(".activateClick").hide();
+			$(".logerrorClick").show();
+		});
+		$(document).on("click", ".continueBtn", function () {
+			if ($("#emailID").val() == "") {
+				$(".checkMesage").show();
+			}
+			else {
+				$("#loginmodal").modal('hide');
+				$("#activateProductModel").modal('show');
+
+
+			}
+		});
+
+		$('#activatenow').on('shown.bs.modal', function () {
+
+		});
+		/**********If salution removed first name will be wider code starts********/
+
+		setTimeout(function () {
+
+			if ($(".salDiv_ed").is(":hidden") || !($(".exEp").find(".selectOpt").hasClass("salDiv_ed"))) {
+				$(".firstNameDiv_ed").removeClass("col-lg-2 col-md-2 col-sm-2").addClass("col-lg-3 col-md-4 col-sm-4");
+			}
+		}, 200);
+
+		/**********If salution removed first name will be wider code starts********/
+
+
+
+		$(".activationCode").keyup(function () {
+			$(".activeproductForm .close-icon").removeClass("disable-pointer");
+
+		})
+
+		$(".view-product").on("click", function () {
+			var activationCodeVal = $(this).parents(".activeproductForm").find(".activationCode").val();
+
+
+			if (activationCodeVal == "") {
+				$(".activeProductInfoWrong").fadeIn();
+				$(".activeProductInfo").css("display", "none");
+			}
+			else {
+				$(".activeProductInfo").fadeIn();
+				$(".activeProductInfoWrong").css("display", "none");
+			}
+		})
+
+		$(".activeproductForm .close-icon").on("click", function () {
+			$(".activationCode").val("");
+			$(".activeproductForm .close-icon").addClass("disable-pointer");
+		});
+		//new change
+
+		$('.rgstrbtn').click(function () {
+
+			$('#loginmodal').modal('hide')
+			$('#Registermodal').modal('show')
+		})
+
+		$('.nextbtn').click(function () {
+
+			$('#Org_radio').show()
+			$(this).hide()
+			$('#Organizationdetails').hide();
+			$('.stepsignup').show()
+
+			$('.stepwizard li').removeClass('active')
+			$('.stepwizard li').eq(1).addClass('active')
+
+		})
+		$('#Org_radio input[type^=radio]').on('change', function () {
+
+			if ($(this).val() == 1) {
+
+				$('#Userdetails').show();
+				$('#UserAlldetails').hide();
+			}
+			else {
+
+				$('#Userdetails').hide();
+				$('#UserAlldetails').show();
+			}
+		});
+
+		$('.signup').click(function () {
+			$(this).parent().parent().parent().find('.successBody').show()
+			$(this).parents('.loginBody').hide()
+
+		});
+	})
+
+
+	$("#catlog>.dropdown-menu>li").mouseenter(function () {
+
+		var menu_ht = $(".courseMenu_drop").outerHeight();
+		var submenu_ht = $(".mega-dropdown-menu").outerHeight();
+
+		if (menu_ht > submenu_ht) {
+			$(".mega-dropdown-menu").outerHeight(menu_ht);
+		}
+		else {
+			$(".courseMenu_drop").outerHeight(submenu_ht);
+		}
+
+	});
+
+	//Tabs in mmenu
+	$(document).on('click', '.mmenuTabs li', function () {
+		$(".mmenuTabs li").removeClass('active');
+		$(this).addClass('active');
+		$(".spacePanel").hide();
+		$("#" + $(this).data('tabs')).show();
+
+	});
+
+	$(document).on("focus", "input.selectOpt", function () {
+		$(this).parents(".form-group").find(".selName").addClass("in");
+		$(this).parents(".datepicker").find(".selName").addClass("in");
+	}).on("blur", "input.selectOpt", function () {
+		var a = $(this).val();
+		if (a.length == 0) {
+			$(this).parents(".form-group").find(".selName").removeClass("in");
+			$(this).parents(".datepicker").find(".selName").removeClass("in");
+		}
+	})
+	$(document).on("click", ".bootstrap-select", function () {
+		$(this).parents(".form-group").find(".selName").addClass("in");
+	});
+	$(document).on("click", ".recomndtBtn", function () {
+		$(this).parents(".recmndDiv").hide();
+		$(".changerecomend").show();
+	});
+	$(document).on("click", ".chngerecmnd", function () {
+		$(".recmndDiv").show();
+		$(".changerecomend").hide();
+	});
+
+
+	$(document).on('click', '.headNav li a.distributorClass ~ .subdropdown_menu>li a', function () {
+		$(".distributorClass>span.distribNm").text($(this).text());
+		if ($(this).hasClass("learnerDv")) {
+			$(".learnerDv").parents(".cart_display").find(".distributorClass").next("span.mySubscb").empty();
+		}
+	});
+	$(document).on('click', '.mandTxt input.selectOpt', function () {
+		if ($(this).val() == "") {
+			$(this).parent().find('.errortxt').addClass("in");
+			$(this).addClass('borderredcolor');
+		}
+		else {
+			$(this).parent().find('.errortxt').removeClass("in");
+			$(this).removeClass('borderredcolor');
+		}
+	});
+	$(document).on('click', '.toggleSwitch.gender-container .btn', function () {
+		$(".toggleSwitch.gender-container .btn").removeClass("active");
+		$(this).addClass("active");
+	});
+
+	$(document).on("click", ".actCodehubSearch .desktopinpt .input-group-btn button.desktopSearch", function () {
+		if ($(window).width() <= 768) {
+			$('.searchbox2').show();
+		}
+	});
+	$(document).on("click", ".close_srch", function () {
+		$(this).parents('.searchbox2').hide();
+		$('.actCodehubSearch .desktopinpt .input-group-btn button.desktopSearch').show();
+	});
+	$(document).on("click", ".signUpShift", function () {
+		$(".logInCont").hide();
+		$(".signUpcont").show();
+	});
+	$(document).on("click touchstart", ".loginShift", function () {
+		$(".logInCont").show();
+		$(".signUpcont").hide();
+	});
+
+	//newly added (Code for new Header)======================
+
+	$(document).on("click", ".nav-toggle", function () {
+		$('html').removeClass('mm-right');
+	});
+
+	$(window).scroll(function () {
+		var scrollerTop = $(window).scrollTop();
+		if ($(window).width() < 603) {
+			if (scrollerTop >= 200) {
+				$('.new_header_mobile').slideUp();
+			}
+			else {
+				$('.new_header_mobile').slideDown();
+			}
+		}
+
+	});
+
+	$(window).scroll(function () {
+		var scrollerTop = $(window).scrollTop();
+		if ($(window).width() < 653) {
+			if (scrollerTop >= 200) {
+				$('.updatedHeader .actCodehubSearch, .updatedHeader .activateCode.desk').slideUp();
+			}
+			else {
+				$('.updatedHeader .actCodehubSearch, .updatedHeader .activateCode.desk').slideDown();
+			}
+		}
+	});
+
+	// if ($(window).width() < 993) {
+	// 	$(document).on("click", function (e) {
+	// 		if ($(e.target).is("a.nav-toggle") === false) {
+	// 			$("a.nav-toggle").removeClass("dNone");
+	// 		}
+	// 	});
+	// }
+
+	$('.mmenu_Bordr').click(function () {
+		setTimeout(function () {
+			if ($(".mm-panels .mm-opened").hasClass("mm-subopened")) {
+				$(".mm-panels .mm-opened").addClass('mMenuHide');
+				$('.back_menu').hide();
+				$('body .nav-toggle.active').addClass('dNone');
+				$('.mm-navbar').addClass('shwMmwnu');
+			}
+
+			if ($('.spacePanel').hasClass('loggedInUser')) {
+				$('.userProfile').hide();
+			}
+
+		}, 100)
+
+	});
+
+
+	$(document).on('click', '.mm-navbar', function () {
+
+		if ($(".mm-panels .mm-opened").hasClass("mm-current")) {
+			if ($("#mm-1").hasClass("mm-current")) {
+				$(".mm-panels .mm-opened").removeClass('mMenuHide');
+				$('.back_menu').show();
+				$('body .nav-toggle.active').removeClass('dNone');
+				$('.mm-navbar').removeClass('shwMmwnu');
+			}
+		}
+
+		if ($('.spacePanel').hasClass('loggedInUser')) {
+			if ($(".mm-panels .mm-opened").hasClass("mm-current")) {
+				if ($("#mm-1").hasClass("mm-current")) {
+					$('.userProfile').css('display', 'block');
+				} else {
+					$('.userProfile').css('display', 'none');
+				}
+			}
+
+		}
+	});
+
+	// on stamp text shows on mouseenter starts
+	$('.onhoverout').mouseenter(function () {
+		$(this).hide();
+		$(this).parent('.lblContainer .sub_content').find('.onhoverin').show();;
+	});
+	$('.onhoverin').mouseleave(function () {
+		$(this).hide();
+		$(this).parent('.lblContainer .sub_content').find('.onhoverout').show();
+	});
+	// on stamp text shows on mouseenter ends
+
+	//scroll on top js starts
+	$('.marketplace-wrp').append('<div class="scroll_top" data-tooltip="tooltip" title="Go to Top">\x3Csvg version=\"1.1\" id=\"Layer_1\" xmlns=\"http:\x2F\x2Fwww.w3.org\x2F2000\x2Fsvg\" xmlns:xlink=\"http:\x2F\x2Fwww.w3.org\x2F1999\x2Fxlink\" x=\"0px\" y=\"0px\"\n\t width=\"13px\" height=\"20px\" viewBox=\"0 0 13 20\" enable-background=\"new 0 0 13 20\" xml:space=\"preserve\"\x3E\n\x3Cpath fill-rule=\"evenodd\" clip-rule=\"evenodd\" fill=\"#FFFFFF\" d=\"M8,6.996V19H5V6.996H2L6.5,1L11,6.996H8z\"\x2F\x3E\n\x3C\x2Fsvg\x3E</div>');
+	$(document).on('click', '.scroll_top', function (e) {
+		$("html, body").animate({ scrollTop: "0" }, 800);
+		$(".scroll_top").hide();
+	});
+
+
+});
+
+$(window).on('load resize', function () {
+	var windowHeight = $(window).height();
+	var footerHeight = $('.footer-templ').height();
+	var footerTop = $('.footer-templ').position().top + footerHeight;
+	if (footerTop < windowHeight) {
+		$('.footer-templ').css('margin-top', 30 + (windowHeight - footerTop) + 'px');
+	}
+	// for small role icons mobile view
+	setTimeout(function () {
+		var tabWidth = $(".mm-panel").width();
+		var smallwidth = tabWidth / 4;
+		$(".role_selections .tab").width(tabWidth - 17);
+		$(".role_selections  .tab button").css("width", smallwidth - 5);
+	}, 300)
+})
+
+$(document).on("click touchstart", ".loginPopUpBtn", function () {
+	$(this).parents('#loginmodal').modal('hide');
+	$('.pre_login').hide();
+	$('.post_login').show();
+	$('.mm-panels > .mm-panel').addClass('incrHt');
+	$('.userProfile').addClass('shwImp');
+	$('.spacePanel').addClass('loggedInUser');
+	$('.mm-listview .logout_mobTxt').show();
+	$('.mm-listview .login_mobTxt').hide();
+
+	$(".incrHt").scroll(function () {
+		var scrollCount = "-" + $(this).scrollTop() + "px";
+		if (scrollCount == "-0px") {
+			$(".userProfile").css('top', '35px');
+			$(".back_menu").css('top', '13px');
+			$(".nav-toggle.active").css('display', 'block');
+		}
+		else {
+			$(".userProfile, .back_menu").css('top', scrollCount);
+			$(".nav-toggle.active").css('display', 'none');
+		}
+	});
+
+	if ($(window).width() < 993) {
+		$(document).on("click", function (e) {
+			if ($(e.target).is("a.nav-toggle") === false) {
+				$(".nav-toggle.active").show();
+			}
+		});
+	}
+
+});
+
