@@ -1,0 +1,552 @@
+@charset "utf-8";
+/* CSS Document */
+body,td,th { font-family: OpenSans-Regular;font-size: 14px; color: #383838; }
+body { margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; background-color: #c4d2d8; line-height:1.6; }
+a{ color:#0174c4; text-decoration:none; font-weight:normal;
+}
+a:hover{ color:#0174c4; text-decoration: underline; font-weight:normal;
+}
+img{ border:0;
+}
+a{ outline:0;
+}
+#layout{ width:990px; margin:0 auto; background:#fff;
+}
+.menubg{ background:url(../images/menubg.gif) repeat-x bottom left;
+}
+.menudownbg{ background:url(../images/menudownbg.gif) repeat-x bottom left; line-height:0; height:12px; font-size:0px;
+}
+.columnbox{ padding:0; margin:0 0 4px 0; background:#f7fbfc; border:1px solid #9ebfc8;  
+}
+.columnbox td{ background:#f7fbfc;  padding:2px 0px 2px 5px; 
+}
+.columnbox th{ background: url(../images/columnboxheaderbg.gif)  repeat-x bottom left; height:25px; padding:0 7px; line-height:25px; font-size:11px; font-weight:bold; text-align:left;
+}
+.columnbox p{ padding: 8px;
+
+}
+.columnbox td ul {
+	padding: 8px !important;
+	margin: 0px 0px 0px 0px;
+	background-image: none; list-style:none; font-size:12px;
+}
+
+.columnbox td li {
+	list-style: none;
+	background-image: url(../images/li_cube.gif);
+	background-repeat: no-repeat;
+	background-position: 4px 8px;
+	padding: 0px 0px 0px 15px;
+	margin: 0 0 4px 0px; color: #666666;
+}
+.columnbox td li a{ color:#083767; text-decoration:none;
+}
+
+.columnbox td li a:hover{ color:#083767; text-decoration: underline;
+}
+.gowebtop{ margin:0 4px 4px 4px;
+}
+.footer{ background:#c4d2d8; 
+}
+.footer td{ background:#c4d2d8; font-size:11px;
+	color:#383838;
+	font-weight: normal;  line-height:20px;
+}
+
+
+.footer td a{ font-weight: normal; color:#083767; text-decoration:none; padding-right:4px; padding-left:4px;
+}
+.footer td a:hover{ font-weight: normal; color:#083767; text-decoration: underline;
+}
+
+#maincontent{ padding:0px 0 8px 0;
+}
+.contenttable{ margin-bottom:16px;
+}
+.contenttable th{ font-size:12px; color:#000000; font-weight:bold; background:#edf8fb url(../images/border.gif) repeat-x bottom left; padding:2px 6px 4px 0px; text-align: left; 
+}
+
+
+#maincontent ul {
+	padding: 0 0 0 8px;
+	margin: 0px 0px 0px 0px;
+	background-image: none; list-style:none;
+}
+
+#maincontent li {
+	list-style: none;
+	background-image: url(../images/li_cube2.gif);
+	background-repeat: no-repeat;
+	background-position: 2px 8px;
+	padding: 0px 0px 0px 10px;
+	margin: 0 0 0px 0px; color: #383838;
+}
+#maincontent li a{ color:#0174c4; text-decoration:none;
+}
+
+#maincontent li a:hover{ color:#0174c4; text-decoration: underline;
+}
+.archives a{ color:#0174c4; text-decoration:none; font-weight:normal; text-align:right; font-size:11px; padding-left:4px; border-left:1px solid #999999; float:right;
+}
+.archives a:hover{ color:#0174c4; text-decoration: underline; font-weight:normal; text-align:right;  font-size:11px;
+}
+.ceoimg{ border:#c2dde5 1px solid; padding:2px; margin:0px 12px 0px 0px;
+}
+.img_pad{ border:#c2dde5 1px solid; padding:2px; margin:0px 12px 0px 0px;
+}
+.userprofile{ margin:3px 0px 10px 0px;
+}
+.banner{ margin:0 0 16px 0;
+}
+.banner img{ border:#c1c1c1 1px solid; padding:2px;
+}
+p{ line-height:1.4; margin-bottom:0;
+}
+.logoutbutton{float:right; display:inline; padding:4px 8px 3px 8px; 
+}
+.loginarea{float:right; display:inline; padding:-1px 8px 3px 8px; color:#ffffff;
+}
+
+
+
+#maincontent .submenu {
+	padding:0 0 0 4px;
+	margin:0;
+	list-style:none;
+	height:27px;
+	background:url(../images/tabmenu0.gif);
+	border:0;
+	line-height:27px;
+}
+#maincontent .submenu li {float:left; list-style:none; background:none; margin:0 2px 0 0; padding:0;}
+#maincontent .submenu li a {
+	display:block;
+	float:left;
+	height:27px;
+	line-height:27px;
+	color:#000;
+	text-decoration:none;
+	text-align:center;
+	padding:0 0 0 0px;
+	cursor:pointer;
+	font-size:11px;
+	font-weight: lighter; background:url(../images/tabmenu3.gif);
+	border-left:1px #446172 solid; 
+}
+#maincontent .submenu li a span {float:left; display:block; padding:0 10px 0 10px; font-weight: lighter; background:url(../images/tabmenu3.gif) no-repeat right top; }
+#maincontent .submenu li.current a span{color:#000; background:url(../images/tabmenu1.gif) no-repeat top left;	line-height:27px; border-left:1px #446172 solid; font-weight: bold;}
+#maincontent .submenu li.current a span {background:url(../images/tabmenu1.gif) no-repeat right top; padding:0 10px 0 10px;font-weight: bold;}
+#maincontent .submenu li a:hover {color:#000; background: url(../images/tabmenu2.gif); text-decoration:none;}
+#maincontent .submenu li a:hover span {background:url(../images/tabmenu2.gif) no-repeat right top; text-decoration:none;}
+#maincontent .submenu li.current a:hover {color:#000; background: url(../images/tabmenu1.gif) no-repeat top left; cursor:default;font-weight: bold;}
+#maincontent .submenu li.current a:hover span {background:url(../images/tabmenu1.gif) no-repeat right top;font-weight: bold;}
+.clear{ clear:both; height:0; line-height:0; font-size:0;
+}
+.morelink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #039;
+	text-decoration: none;
+}
+a.morelink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #039;
+	text-decoration: underline;
+}
+a.morelink:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #039;
+	text-decoration: none;
+}
+
+.thumb_img_tab
+{
+	padding:0px 8px 0px 0px;
+}
+
+/* Holiday CSS Starts*/
+.black_bg {
+	background-color: #000000;
+}
+.white_bg {
+	background-color: #ffffff;
+}
+.holiday_header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	text-align:center;
+}
+.holiday_content {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align:center;
+}
+.ocasssion_content {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align:left;
+	padding:0px 0px 0px 5px;
+}
+/* Holiday CSS Ends*/
+
+/* Content Style Sheet Starts Here */
+.content13normal {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align:justify;
+}
+.content13normalbold {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.contentnormalunderline {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: underline;
+	text-align: center;
+}
+.content12normal {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align:justify;
+}
+.content12normalbold {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	text-align:justify;
+}
+.content11normal {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.content11normalbold {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.content12normalhighight {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	padding:5px 5px;
+}
+.content12normalheading {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #2c99cc;
+	text-decoration: none;
+}
+a.content12normalheading {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #2c99cc;
+	text-decoration: underline;
+}
+a.content12normalheading:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #2c99cc;
+	text-decoration: none;
+}
+.induction_left_col {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	background-color: #f7fbfc;
+}
+/* Content Style Sheet Ends Here */
+
+/* Finance Year Style Sheet Ends Here */
+.whiteheader {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.bluetext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #318db4;
+	text-decoration: none;
+}
+a.bluetext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #318db4;
+	text-decoration: underline;
+}
+a.bluetext:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #318db4;
+	text-decoration: none;
+}
+
+/* Pat on the back Header Year Style Sheet Starts Here */
+.pat_header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+}
+/* Pat on the back Header Year Style Sheet Ends Here */
+
+/* Employee of the Year Style Sheet Starts Here */
+.emp_header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+}
+/* Event Page Style Sheet Starts here */
+.event_top_bg {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	background-image: url(../images/marcomnews/event_top_bg.gif);
+	background-repeat: repeat-x;
+	text-align: center;
+}
+.event_date_bg {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: left;
+	background-color: #f7fbfc;
+}
+.event_content {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	text-align: left;
+}
+.inner_table_content {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	text-align: center;
+}
+.inner_table_header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	background-image: url(../images/marcomnews/event_top_bg.gif);
+	text-decoration: none;
+}
+.inner_table_content_left {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+}
+.healthtipsheader{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #238cb8;
+	text-decoration: none;
+	text-align:justify;
+}
+
+.blue_bg{ background:#1f85ad; }
+.white_bg{ background:#ffffff; }
+.white_text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.archive_text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #F6FF00;
+	text-decoration: none;
+}
+a.archive_text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #F6FF00;
+	text-decoration: none;
+}
+a.archive_text:hover{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #F6FF00;
+	text-decoration: underline;
+}
+a.archive_text1{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #E30C1B;
+	text-decoration: none;
+}
+a.archive_text1:hover{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #E30C1B;
+	text-decoration: underline;
+}
+.new_intiatives_link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #2280AC;
+	text-decoration: none;
+}
+a.new_intiatives_link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #2280AC;
+	text-decoration: none;
+}
+a.new_intiatives_link:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #2280AC;
+	text-decoration: underline;
+}
+
+/* Event Page Style Sheet Ends here */
+
+/* Lightbox Style Sheet starts here*/
+
+#lightbox{
+	background-color:#eee;
+	padding: 10px;
+	border-bottom: 2px solid #666;
+	border-right: 2px solid #666;
+	}
+#lightboxDetails{
+	font-size: 0.8em;
+	padding-top: 0.4em;
+	}	
+#lightboxCaption{ float: left; }
+#keyboardMsg{ float: right; }
+#closeButton{ top: 5px; right: 5px; }
+
+#lightbox img{ border: none; clear: both;} 
+#overlay img{ border: none; }
+
+#overlay{ background-image: url(overlay.png); }
+
+* html #overlay{
+	background-color: #333;
+	back\ground-color: transparent;
+	background-image: url(blank.gif);
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="overlay.png", sizingMethod="scale");
+	}
+
+
+/* Lightbox Style Sheet ends here*/	
+
+/*  Style of employee Contact List start here */
+
+.emp_header_bg1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background:#28688E;
+	text-align:left;
+	}
+.emp_header_bg2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #3D78B2;
+	text-decoration: none;
+	background:#D4ECF6;
+	text-align:left;
+}
+.emp_content  {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	background:#FFFFFF;
+	text-align:left;
+	vertical-align:top;
+}
+a.emp_content
+{
+
+	color: #28688E;
+	text-decoration:underline;
+}
+a.emp_content:hover
+{
+
+	color: #28688E;
+	text-decoration:none;
+}
+.month_header{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	color: #ffffff;
+	text-decoration: none;
+
+	text-align:center;
+}
+/*  Style of employee Contact List ends here */

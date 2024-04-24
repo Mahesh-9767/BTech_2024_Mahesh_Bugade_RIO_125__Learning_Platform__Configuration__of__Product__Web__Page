@@ -1,0 +1,551 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*==========  Mobile First Method  ==========*/
+		
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+}
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 400px) {
+.launchSuccess .buyNow{margin-left:14px}
+}
+
+@media only screen and (min-width : 769px) {
+nav#menu{display:none}
+.mobileHdr {display: none;}
+
+}
+    /* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+.width80{width:80% !important;}
+.maxwid70{max-width:70%}
+.maxwid40{max-width:40%}
+/*.container {
+	width: auto!important;
+}*/
+
+@media only screen and (min-width: 768px)
+{
+#previewmodal .modal-dialog {
+    width: 90%;
+}
+}
+
+}
+
+
+@media only screen and (min-width : 455px)
+{
+.readmoreformobile
+{
+	display:block;
+}
+}
+
+@media only screen and (min-width : 769px) {
+.moveContentup{position:relative;top:-50px}
+}
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+		.infoDivbox{min-height:100px}
+        .infoDivbox:nth-child(5)::before,.infoDivbox:nth-child(6)::before,.infoDivbox:nth-child(7)::before{content:normal;}
+		.infoDivbox:nth-child(4)::after{content:normal;}
+		ul.nav li.dropdown:hover > ul.dropdown-menu {display: block;}
+		.appHeading .headerMove{padding-bottom:20px;}
+		
+}
+
+    /* Large Devices, Wide Screens */
+   
+    /*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+ @media only screen and (max-width : 1280px) {
+.applistBox{margin:10px}
+}
+
+
+@media only screen and (max-width: 480px)
+{
+.subscribePckg {
+    margin-top: 10px;
+}
+}
+
+
+
+@media only screen and (max-width: 767px)
+{
+.packageBox
+{
+margin-top:30px;
+}
+}
+
+@media (min-width:992px) {
+.increasewidth {
+	width: 1170px !important;
+}
+}
+
+
+@media only screen and (max-width: 992px)
+{
+.responsMainprt.container {
+    width: 100%;
+}
+}
+
+@media only screen and (min-width:768px)
+{
+.priceListshow{
+	display:none;
+}
+}
+
+@media only screen and (min-width : 320px) 
+{ 
+.paddingread 
+{ display;none;
+ } 
+}
+
+@media only screen and (min-width:1024px)
+{
+.priceListshow{
+	display:none;
+}
+}
+
+
+
+@media only screen and (max-width: 767px)
+{
+.licencePkg {
+    height: auto !important;
+}
+}
+
+
+@media only screen and (max-width: 767px)
+{
+.pricingFeature.mobile li {
+    text-align: left;
+}
+}
+
+@media only screen and (max-width: 640px)
+{
+.microsite h2.fontsize30 {
+    text-align: left;
+    font-size: 21px;
+}
+}
+
+@media only screen and (max-width: 320px)
+{
+.hisub {
+    max-height: 100%;
+    overflow: hidden;
+}}
+
+@media only screen and (max-width: 767px)
+{
+.packageBox {
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+}
+}
+
+
+
+@media only screen and (max-width: 767px)
+{
+.packageBox {
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+}
+}
+
+
+@media only screen and (max-width: 767px)
+{
+.licencePkg .valign_middle {
+    top: auto;
+    transform: none;
+}
+}
+
+@media only screen and (max-width: 767px)
+{
+.priceListshow {
+    cursor: pointer;
+    color: #bfc1b1;
+    font-size: 20px;
+}
+}
+
+
+.packageBox.trialPck {
+    box-shadow: 3px 4px 19px 0px #ccc;
+}
+
+
+@media only screen and (max-width : 1024px) {
+  .list-inline>li { padding-left:3px; padding-right: 3px;}
+  .launchSuccess .tryDemo { margin-left:10px;}
+  	.main-footer .footer-div:nth-child(1) { width:20%;}
+	.main-footer .footer-div:nth-child(2) { width:20%;}
+	.main-footer .footer-div:nth-child(3) { width:35%;}
+	.main-footer .footer-div:nth-child(4) { width:25%;}
+	
+	.appsubdashboard .leftBlck { width:70%;}
+	.appsubdashboard .rightBlck { width:30%;}
+	.appsubdashboard .track1,.appsubdashboard  .track2,.appsubdashboard  .track3 { width:195px; margin-left:0;}
+	.appsubdashboard .lrgTxt { font-size:42px; padding-top:18px;}
+	.appsubdashboard .smlTxt { font-size:14px;}
+	.appsubdashboard .entrpsePlan,.appsubdashboard .addsOn { width:300px;}
+	.appsubdashboard .planDuration { padding:15px 0;}
+	.appsubdashboard .planDuration .paddingleft10{padding-left:0}
+	.downloadPdf{font-size:14px;}
+}
+    /* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+.ratingRev-btn .btn{margin-top:15px}
+.ratingbarsCont{margin-bottom:20px}		
+.responsMainprt.container{width:100%}
+.appDp{width:140px;height:140px;bottom:80px}
+.appDp svg{width:127px;height:127px}
+.appHeading{width:76%;bottom:95px}
+.downloadPdf{font-size:13px;}
+.appsubdashboard .leftBlck { width: 100%; }
+.appsubdashboard .rightBlck { width:100%;}
+.appsubdashboard .entrpsePlan,.appsubdashboard  .addsOn { width: 100%;}
+}
+
+@media only screen and (max-width: 767px)
+{
+
+.keyFeaturedtl {
+    display: none;
+}
+}
+
+
+
+@media only screen and (max-width: 767px)
+{
+.pricingFeature.desktp {
+    display: none;
+}
+}
+
+@media only screen and (max-width: 767px)
+{
+.totalAddonPatch {
+    height: auto;
+    padding: 15px;
+}
+}
+
+@media only screen and (max-width: 640px)
+{
+.subscribePckg h4 {
+    font-size: 13px;
+    text-align: left;
+}
+}
+
+    /* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+.appHeading .tabmobHide{display:none;}
+.rateleftBordr:before{content:normal}
+.ratebtmBordr:after{left:auto}
+.rateleftBordr {margin-top:15px;}
+/*.owl-testimonial .owl-prev{left:-50px;top:25px;}
+.owl-testimonial .owl-next{right:-50px;top:25px;}*/
+
+.bottompagetext{
+	line-height:30px;
+	float:none;
+	text-align:center
+}
+.bottompagenum{
+	float:none;
+}
+.pagenumbertext {
+	font-size: 11px;
+	margin-top: 11px;
+	margin-left:10px;
+}
+.mrgntop10{margin-top:10px ;}
+.appHeading{width:100%;padding:0;bottom:60px;}
+.appHeading .topContcolor{color:#333;}
+.appHeading .headerMove{text-align: center;}
+.connectr{margin-top:25px}
+.connectr::after{content:normal;}
+.infoDivbox{width:50%}
+.mobileHdr{/*margin-top:10px;*/margin-left:8px;float:left}
+.appHeading .topContcolor.headerMove{text-align:center;margin:0 -35px;padding-top: 10px;padding-bottom: 10px;}
+.shareApp{position:relative}
+.appHeading .shareApp::after{content:"";background:#d9d9d9;width:1px;height: 41px;position: absolute;top: -11px;right: -10px;}
+
+/*.container { width:730px;}*/
+/*.seeMore { margin-right:40px;}*/
+/*.lnkTrance { margin-left:0px;}*/
+/*.hideBlck { max-height:165px;}*/
+.shareApp { margin-left:0; padding-right:10px;}
+.commApp { padding-right:10px;}
+.commIco { margin-left:10px;}
+.banner { height:150px;}
+.brdCrmTop { top: 60px; left: 20px;}
+#whatsincluded .margintop20, #keyfeatures .margintop20 { margin-top:0 !important;}
+#whatsincluded .bulletList, #keyfeatures .bulletList { padding-top:15px;}
+#whatsincluded .margintop10, #keyfeatures .margintop10 { margin-top:0 !important;}
+.footer-div { text-align:left !important;}
+footer ul { padding-left:0 !important;}
+.innerWrp .paddingleft10 { padding-left:0;}
+.main-footer .footer-div:nth-child(1) { width:18%;}
+.main-footer .footer-div:nth-child(2) { width:20%;}
+.main-footer .footer-div:nth-child(3) { width:37%;}
+.main-footer .footer-div:nth-child(4) { width:25%;}
+
+.itemBox:hover::after{opacity:0;}
+.itemBox:hover .slideBoxap{bottom:0px}
+.itemBox.comingsoon:hover .slideBoxap{bottom:0px}
+.itemBox:hover .appDetail{height:0px}
+.appsubdashboard .widthLeft { width:35%;}
+.appsubdashboard .widthRight { width:65%;}
+.appsubdashboard .vehicleBorder { width:100%;}
+.appsubdashboard .track1,.appsubdashboard .track2,.appsubdashboard .track3 { width: 215px;}
+
+.appsubdashboard .entrpsePlan { position:relative; height:155px;}
+.appsubdashboard .tabVw { position:absolute; top:30px; right:20px;}
+.goldenTxt.shareApp,.goldenTxt.commApp{color:#f29235}
+.goldenTxt.shareApp .lnkTrance:after,.goldenTxt.commApp .lnkTrance:after{background-color:#f29235}
+.goldenTxt.shareApp svg path,.goldenTxt.commApp svg path{fill:#f29235}
+.shadowBox{margin-top:40px}
+/*To hide the arrow in add on package section*/
+.totalAddonPatch .addOnBorder::before,.totalAddonPatch .addOnBarrow::before,.totalAddonPatch .addOnBarrow::after{content:normal}
+
+}
+
+
+@media only screen and (max-width:640px) {
+.homeBanner{height:auto;padding-bottom:50px}
+.innerWrp {
+    margin: 10px 0 !important;
+    text-align: left !important;
+}
+.featurePad .tab-pane{padding:10px}
+.appTabs{margin-top:30px}
+.appTabs li{width:auto;}
+.appTabs li a{padding:7px 4px 7px 3px; font-size:13px; font-family:opensans-semibold;}
+.clickTabs li a{ padding:10px; font-size: 14px; font-family: opensans-semibold;}
+.shadowBox{ box-shadow:none}
+.connectr .fontsize16{font-size:14px; padding:5px 0;}
+.microsite h2.fontsize30{text-align:left;font-size:21px}
+.microsite .whiteTrackcta h2{text-align:center}
+.subscribePckg h4{font-size:13px;text-align:left}
+.addOntab{display:none}
+.addOnDetail{float:none;width:100%}
+.addOnDetail .tab-pane{display:block;margin-top:20px}
+.blueHeadaddon{display:block}
+.addOnDistrib{background:transparent;box-shadow:none;}
+.checkAddon:last-child{padding-bottom:10px}
+.infoDivbox{width:100%}
+.infoDivbox::after{content:normal;}
+.syllabusSelection .container-fluid{padding-left:0;padding-right:0}
+.owl-testimonial .owl-prev{left:0;}
+.owl-testimonial .owl-next{right:0;}
+.brdCrmTop { left:0; top: 48px;font-size:12px}
+/*.container { width:610px;}*/
+/*.seeMore { margin-right:8px;}*/
+.main-footer .footer-div:nth-child(1) { width:22%;}
+.main-footer .footer-div:nth-child(2) { width:27%;}
+.main-footer .footer-div:nth-child(3) { width:50%;}
+.main-footer .footer-div:nth-child(4) { width:100%;}
+
+.appsubdashboard .trackBtn { width: 42%;}
+.appsubdashboard .trackTxt { width: 58%;}
+.appsubdashboard .trackBlock { text-align:center;}
+.appsubdashboard .track1,.appsubdashboard .track2,.appsubdashboard .track3 { margin: 0 0 25px 0;}
+.appsubdashboard .widthLeft { width:30%;}
+.appsubdashboard .widthRight { width:70%;}
+.appsubdashboard .rightBlck { width:100%;}
+.appsubdashboard .entrpsePlan,.appsubdashboard .addsOn { margin: 0 auto;}
+.appHubdashboard .customMenuH { padding:0;}
+.owl-sliderScreens .customSlidePd{padding-left:0px}
+.screens.videodiv{width:200px;}
+.screens.desktop,.screens.mobile,.screens.square{width:300px;margin:auto;}
+}
+    /* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+.paddingLR20,.paddingLR50 {padding-left:0;padding-right:0}
+.ratingRev-btn{float:none;text-align:center}
+.packageBox{width:auto;/*margin:10px -5px*/}
+.bulletList{padding:0 0 0 25px}
+.appDp{width:100px;height:100px;margin:0 auto;bottom:40px}
+.appDp svg{width:85px;height:85px}
+.appHeading{bottom:10px}
+.appHeading .topContcolor.headerMove{margin:-35px -15px; padding-top:10px; padding-bottom:10px;}
+.appcontent { font-size:15px;}
+.searchboxnew{ display:none !important;}
+
+/*.container { width:450px;}*/
+.shadowBox { border-radius:0;}
+.subscribePckg { margin-top:10px;}
+/*.seeMore { margin-right:0px; margin-top:3px;}*/
+.homeBanner { background: #99dae1; }
+.homeBanner h1 { margin-top:10px; font-size:30px;}
+.homeBanner div { font-size:15px; padding:0 8px;}
+.rating_rev { font-size:13px;}
+.infoDivbox:nth-last-child(1)::before{ height:0;}
+/*.syllabusSelection .margintop30 { margin-top:0px !important;}*/
+/*.container.margintop30 { margin-top:20px !important;}*/
+/*.belowBrdrTabs  { margin-top:20px !important;}*/
+.hideBlck, .hideTnC { max-height:205px; } 
+/*.lnkTrance { margin-left:10px;}*/
+.banner { height:80px;}
+.footer-div { border-left:none;}
+footer ul { padding-left:0 !important;}
+.innerWrp .paddingleft10 { padding-left:0;}
+.shareApp { margin-left:0; padding-right:10px;}
+.commApp { padding-right:10px;}
+.commIco { margin-left:10px;}
+.follwDiv { margin-top:0 !important;}
+.main-footer .footer-div:nth-child(1) { width:49%;}
+.main-footer .footer-div:nth-child(2) { width:49%;}
+.main-footer .footer-div:nth-child(3) { width:99%;}
+.main-footer .footer-div:nth-child(4) { width:99%;}
+
+.launchSuccess .app-btn.appBtn-md { width:148px;}
+.btn-red { width: 250px; font-size:19px;}
+.btn-red:hover { width: 250px; font-size:19px;}
+.appHubdashboard .customMenuH { padding:0;}
+.appsubdashboard .widthLeft { width:100%; text-align:center;}
+.appsubdashboard .widthRight { width:100%;}
+
+.appsubdashboard .trackTxt { width: 100%;}
+.appsubdashboard .trackBtn {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 0;
+}
+.appsubdashboard .track1,.appsubdashboard .track2,.appsubdashboard .track3 { width: 280px;}
+.appsubdashboard .lrgTxt {font-size: 48px; }
+.appsubdashboard .smlTxt { font-size: 16px;}
+.appsubdashboard .leftBlck { padding:0;}
+.appsubdashboard .smplTxt,.appsubdashboard .someData { width:100%;}
+.appsubdashboard .tabVw { position:initial;}
+.appsubdashboard .entrpsePlan { height:200px;}
+.tabAdjustsec.appTabs li{width:60px;height:42px;}
+.tabAdjustsec.appTabs li::before,.tabAdjustsec.appTabs li::after{border-bottom:42px solid #c2e8ed}
+.appTabs li.active::before, .appTabs li.active::after{border-bottom:42px solid #85D2DB}
+
+/*Responsive add on package section*/
+.addOnDiv [class*='col-xs-']{float:none;width:100%}
+.addOnBorder [class*="col-"]{border-bottom:1px solid #e5e5e5;padding-bottom:15px}
+.totalAddonPatch .addOnBarrow{margin-top:15px}
+.valign_middle {
+    position: relative;
+     top: 0; 
+    display: block;
+     transform:none !important;
+}
+
+
+}
+
+@media only screen and (max-width : 360px) {
+.screens iframe{width:auto !important;height:auto !important; margin:auto;}
+.appDp{ float:none;}
+.mobileHdr{position:relative;bottom:35px; float:none; text-align:center; }
+/*.appDp{ width:80px; height:85px;}
+.mobileHdr{position:relative;bottom:10px;}
+.rateFill.marginrgt5 { margin-right:2px !important;}
+.tabmobHide.marginleft15 { margin-left:5px;}*/
+.topContcolor span { font-family:opensans-semibold;}
+/*.container { width:327px;}*/
+#part4 .center-block { font-size:19px;}
+#part4 .margintop50 { margin-top:0px;}
+
+.appTabs li{margin:0 5px}
+.appTabs li::before{border-left:10px solid transparent;left:-10px}
+.appTabs li::after{border-right:10px solid transparent;right:-10px}
+
+/*.lnkTrance { margin-left:0px;}*/
+.hideSec { max-height:420px;}
+.hideBlck, .hideTnC { max-height:240px; } 
+
+}
+
+@media only screen and (max-width : 320px) {
+.launchSuccess .tryDemo { margin-left: 0;}
+.appTabs li a {
+    padding: 7px 0px 7px 0px;
+    font-size: 12px;
+}
+.screens iframe{width:auto !important;height:auto !important; margin:auto;}
+/*.container { width:288px;}*/
+.clickTabs li a {
+    font-size: 13px;
+}
+.enterprisePlan .boxBtnwhite, .platformPlan .boxBtnwhite {
+    font-size:13px; padding:6px 10px; margin-top:8px;
+}
+.hideBlck, .hideTnC {
+    max-height: 273px;
+}
+.launchSuccess .app-btn.appBtn-md { width:132px;}
+
+}
+
+ /* Custom, iPhone Retina */ 
+@media only screen and (max-width : 479px) {
+.testimonials {
+    padding-top: 100px;
+}
+.screens iframe{width:auto !important;height:auto !important;margin:auto;}
+}
+/*@media only screen and (min-width : 480px) and (max-width: 639px){
+.maxwid70{max-width:90%}
+.maxwid40{max-width:40%}
+
+}*/
+@media only screen and (min-width : 640px) and (max-width: 767px){
+
+.owl-testimonial .owl-prev{left:-25px;top:25px;}
+.owl-testimonial .owl-next{right:-25px;top:25px;}
+.innerWrp {
+    margin: 10px 0;
+    text-align: left;
+}
+/*.maxwid70{max-width:70%}
+.maxwid40{max-width:40%}*/
+.screens iframe{width:auto !important;height:auto !important; margin:auto;}
+}
+@media only screen and (min-width : 768px) and (max-width: 1023px){
+.owl-testimonial .owl-prev{left:-50px;top:25px;}
+.owl-testimonial .owl-next{right:-50px;top:25px;}
+}
+@media only screen and (min-width : 991px) and (max-width: 1190px){
+.applistContainer{text-align:left;max-width:600px;margin:auto}
+}
+@media only screen and (min-width : 640px) and (max-width: 880px){
+.applistContainer{text-align:left;max-width:550px;margin:auto}
+.applistBox{margin:5px}
+.infoDivbox:nth-child(2)::after,.infoDivbox:nth-child(4)::after,.infoDivbox:nth-child(6)::after{content:normal;}
+		.infoDivbox:nth-child(7)::before{content:normal;}
+
+}
+/*@media only screen and (min-width : 768px) and (max-width: 880px){
+.trackBtn{width:100%;display:block;margin-top:10px;text-align:left}
+.trackTxt{width:100%;float:none}
+}*/
+/*.screens iframe{width:560px;height:317px;}*/

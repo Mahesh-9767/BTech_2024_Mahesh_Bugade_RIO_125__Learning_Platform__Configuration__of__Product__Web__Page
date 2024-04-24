@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>RIO 125 - Learning Platform Configuration of Product Web Page</title>
+  <meta name="title" content="TCS-ION">
+  <meta name="description" content="This is a education html template made by codewithsadee">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./TCS iON Logo Vector.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom font link
+  -->
+  <link rel="stylesheet" href="./assets/font/font.css">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/hero-bg.png">
+
+   <!-- ===== BOX ICONS ===== -->
+   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <!-- 
+    - PRELOADER
+  -->
+
+  <div class="preloader" data-preloader>
+    <div class="circle" data-circle></div>
+  </div>
+  
+  <!-- Login Page -->
+  
+  <div class="login">
+    <div class="login__content">
+        
+
+        <div class="login__forms">
+            <form action="" class="login__registre" id="login-in">
+                <h1 class="login__title">Login</h1>
+
+                <div class="login__box">
+                    <i class='bx bx-user login__icon'></i>
+                    <input type="text" placeholder="Username" class="login__input">
+                </div>
+
+                <div class="login__box">
+                    <i class='bx bx-lock-alt login__icon'></i>
+                    <input type="password" placeholder="Password" class="login__input">
+                </div>
+
+                <a href="#" class="login__forgot">Forgot password?</a>
+
+                <a href="#" class="login__button">Login</a>
+
+                <div>
+                    <span class="login__account">Don't have an Account ?</span>
+                    <span class="login__signin" id="sign-up">Register</span>
+                </div>
+            </form>
+
+            <form action="" class="login__create none" id="login-up">
+                <h1 class="login__title">Create Account</h1>
+
+                <div class="login__box">
+                    <i class='bx bx-user login__icon'></i>
+                    <input type="text" placeholder="Username" class="login__input">
+                </div>
+
+                <div class="login__box">
+                    <i class='bx bx-at login__icon'></i>
+                    <input type="text" placeholder="Email" class="login__input">
+                </div>
+
+                <div class="login__box">
+                    <i class='bx bx-lock-alt login__icon'></i>
+                    <input type="password" placeholder="Password" class="login__input">
+                </div>
+
+                <a href="#" class="login__button">Register</a>
+
+                <div>
+                    <span class="login__account">Already have an Account ?</span>
+                    <span class="login__signup" id="sign-in">Login</span>
+                </div>
+
+                <div class="login__social">
+                    <a href="#" class="login__social-icon" id="facebook-link"><i class='bx bxl-facebook' ></i></a>
+                    <a href="#" class="login__social-icon" id="twitter-link"><i class='bx bxl-twitter' ></i></a>
+                    <a href="#" class="login__social-icon" id="google-link"><i class='bx bxl-google' ></i></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/TCS iON Logo Vector.svg" width="145" height="27" alt="TCS-ION home">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="./assets/images/TCS iON Logo Vector.svg" width="145" height="27" alt="TCS-ION home">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" dalota-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link title-sm" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#coures" class="navbar-link title-sm" data-nav-link>Courses</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#blog" class="navbar-link title-sm" data-nav-link>Blog</a>
+          </li>
+
+          <!-- <li class="navbar-item">
+            <a href="#./assets/images/TCS iON Digital App Hub - Support Services.html" class="navbar-link title-sm" data-nav-link>Contacts</a>
+          </li> -->
+
+          <li class="navbar-item">
+            <a href="https://cdn4.tcsion.com/dotcom/appshub/SupportServices/support_service.html" class="navbar-link title-sm" target="_blank">Contacts</a>
+          </li>
+          
+
+        </ul>
+
+      </nav>
+
+      <a href="#" class="btn btn-secondary">Login</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-overlay data-nav-toggler></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO main section
+      -->
+
+      <section class="section hero has-bg-image" aria-labelledby="hero-label"
+        style="background-image: url('./assets/images/hero-bg.png')">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="headline-lg" id="hero-label">
+              Better <span class="span">Learning Future</span> Starts With <span class="TCS">TCS-ION</span>
+            </h1>
+
+            <p class="title-md has-before">
+              It is long established fact that reader distracted by the readable content.
+            </p>
+
+            <div class="btn-group">
+              <a href="#" class="btn btn-primary">Get Started Now</a>
+
+              <a href="#" class="btn btn-secondary">Get Started Now</a>
+            </div>
+
+          </div>
+
+          <figure class="hero-banner">
+            <img src="./assets/images/vid-img.webp" width="590" height="620" alt="hero banner" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+      
+      <!-- 
+        --Banner 
+      -->
+      
+    <section class="section-banner" aria-labelledby="banner-label">
+      <div class="section-container">
+        <div class="banner-slider">
+          <img src="./assets/images/GAAStZKaUAAB07B.jpg"  loading="lazy" alt="about banner" class="banner-image1">
+        
+          <img  src="./assets/images/1592783334876.jpeg"  loading="lazy" alt="about banner"  class="banner-image2">
+      
+          <img  src="./assets/images/1592098080944.jpeg"  loading="lazy" alt="about banner" class="banner-image3">
+                  
+        </div>
+      </div>
+    </section>
+      
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" aria-labelledby="about-label" id="blog">
+        <div class="container">
+
+          <figure class="about-banner">
+            <img src="./assets/images/learning-management-system-experience-platform-people-engagement.jpg" width="775" height="685" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="about-content">
+
+            <p class="title-sm section-subtitle" id="about-label">About TCS-ION</p>
+
+            <h2 class="headline-md section-title">
+              We Provide The Best Online <span class="span has-after">Education</span>
+            </h2>
+
+            <p class="title-sm section-text">
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+              in some form, by injected humour.We empower people and organisations with tech-led education that helps them 
+              transform and makes them future-ready. We have designed a phygital platform that layers digital technology 
+              over physical assets. Our variety of solutions reimagines and transforms all key processes.
+            </p>
+
+            
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- 
+        - #CATEGORY
+      -->
+
+      <section class="section category has-bg-image" aria-labelledby="category-label"
+        style="background-image: url('./assets/images/category-bg.png')" id="coures">
+        <div class="container">
+
+          <p class="title-sm text-center section-subtitle" id="category-label">Course Categories</p>
+
+          <h2 class="headline-md text-center section-title">
+            TCS-ION Top <span class="span has-after">Categories</span>
+          </h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="card category-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/white-big-data.webp" width="72" height="72" loading="lazy"
+                    alt="Data Science icon">
+                </div>
+
+                <div>
+                  <h3 class="title-lg">DATA SCIENCE</h3>
+
+                  <p class="title-sm">Courses</p>
+                </div>
+
+                <a href="#" class="layer-link" aria-label="Data Science Category"></a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card category-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/14_01edge-cloud-computing.jpg" width="72" height="72" loading="lazy"
+                    alt="Cloud Technologies icon">
+                </div>
+
+                <div>
+                  <h3 class="title-lg">CLOUD</h3>
+
+                  <p class="title-sm">Courses</p>
+                </div>
+
+                <a href="#" class="layer-link" aria-label="CLOUD Category"></a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card category-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/depositphotos_239549088-stock-photo-cyber-security-data-protection-information.jpg" width="72" height="72" loading="lazy"
+                    alt="Cyber Security icon">
+                </div>
+
+                <div>
+                  <h3 class="title-lg">CYBER SECURITY</h3>
+
+                  <p class="title-sm">Courses</p>
+                </div>
+
+                <a href="#" class="layer-link" aria-label="CYBER SECURITY Category"></a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card category-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/istockphoto-1438159416-170667a.webp" width="72" height="72" loading="lazy"
+                    alt="IT Services icon">
+                </div>
+
+                <div>
+                  <h3 class="title-lg">IT SERVICES</h3>
+
+                  <p class="title-sm">Courses</p>
+                </div>
+
+                <a href="#" class="layer-link" aria-label="IT SERVICES Category"></a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card category-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/istockphoto-1406888053-612x612.jpg" width="72" height="72" loading="lazy"
+                    alt="Masters Programs icon">
+                </div>
+
+                <div>
+                  <h3 class="title-lg">Masters Programs</h3>
+
+                  <p class="title-sm">Courses</p>
+                </div>
+
+                <a href="#" class="layer-link" aria-label="Masters Programs Category"></a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card category-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/istockphoto-1199145131-612x612_NE.jpg" width="72" height="72" loading="lazy" alt="Networking icon">
+                </div>
+
+                <div>
+                  <h3 class="title-lg">Networking</h3>
+
+                  <p class="title-sm">Courses</p>
+                </div>
+
+                <a href="#" class="layer-link" aria-label="Networking Category"></a>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <a href="#" class="btn btn-primary">View All Categories</a>
+
+        </div>
+      </section>
+
+
+      
+
+
+
+
+      <!-- 
+        - #COURSE
+      -->
+
+      <section class="section course has-bg-image" aria-labelledby="course-label"
+        style="background-image: url('./assets/images/course-bg.png')">
+        <div class="container">
+
+          <p class="title-sm section-subtitle text-center">Featured Courses</p>
+
+          <h2 class="headline-md section-title text-center" id="course-label">
+            Choose Unlimited <span class="span has-after">Courses</span>
+          </h2>
+
+          <ul class="grid-list">
+
+            <li class="card-container">
+              <div class="card course-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/Artificial Intelligence.png" width="370" height="248" loading="lazy"
+                    alt="Basic Artificial Intelligence" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="wrapper">
+
+                    <p class="title-lg card-price">$70.30</p>
+
+                    <div class="rating-wrapper">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                    </div>
+                  </div>
+
+                  <h3 class="title-lg card-title">
+                    Artificial Intelligence for Real-World Application
+                  </h3>
+
+                  <div class="card-meta wrapper">
+
+                    <p class="title-sm">
+                      <img src="./assets/images/file-outline.svg" width="20" height="20" loading="lazy" alt="">
+
+                      <span class="span">2 Lessons</span>
+                    </p>
+
+                    <p class="title-sm">
+                      <img src="./assets/images/user-outline.svg" width="20" height="20" loading="lazy" alt="">
+
+                      <span class="span">4k Students</span>
+                    </p>
+
+                  </div>
+
+                </div>
+
+                <a href="https://www.tcsion.com/courses/industry-honour-course/artificial-intelligence/" class="layer-link"
+                  aria-label="Course Details, Basic Artificial Intelligence for Real-World Application" target="_blank"></a>
+
+              </div>
+            </li>
+
+            <li class="card-container">
+              <div class="card course-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/Machine learning.webp" width="370" height="248" loading="lazy"
+                    alt="Machine Learning for Real World Applications" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="wrapper">
+
+                    <p class="title-lg card-price">$75.77</p>
+
+                    <div class="rating-wrapper">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                    </div>
+
+                  </div>
+
+                  <h3 class="title-lg card-title">
+                    Machine Learning for Real World Applications
+                  </h3>
+
+                  <div class="card-meta wrapper">
+
+                    <p class="title-sm">
+                      <img src="./assets/images/file-outline.svg" width="20" height="20" loading="lazy" alt="">
+
+                      <span class="span">2 Lessons</span>
+                    </p>
+
+                    <p class="title-sm">
+                      <img src="./assets/images/user-outline.svg" width="20" height="20" loading="lazy" alt="">
+
+                      <span class="span">4k Students</span>
+                    </p>
+
+                  </div>
+
+                </div>
+
+                <a href="https://www.tcsion.com/courses/industry-honour-course/machine-learning/" class="layer-link"
+                  aria-label="Course Details, Machine Learning for Real World Applications" target="_blank"></a>
+
+              </div>
+            </li>
+
+            <li class="card-container">
+              <div class="card course-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/Deep Lernig.jpeg" width="370" height="248" loading="lazy"
+                    alt="Application of Deep Learning and Neural Network" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="wrapper">
+
+                    <p class="title-lg card-price">$72.39</p>
+
+                    <div class="rating-wrapper">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                    </div>
+
+                  </div>
+
+                  <h3 class="title-lg card-title">
+                    Application of Deep Learning and Neural Network
+                  </h3>
+
+                  <div class="card-meta wrapper">
+
+                    <p class="title-sm">
+                      <img src="./assets/images/file-outline.svg" width="20" height="20" loading="lazy" alt="">
+
+                      <span class="span">2 Lessons</span>
+                    </p>
+
+                    <p class="title-sm">
+                      <img src="./assets/images/user-outline.svg" width="20" height="20" loading="lazy" alt="">
+
+                      <span class="span">4k Students</span>
+                    </p>
+
+                  </div>
+
+                </div>
+
+                <a href="https://www.tcsion.com/courses/industry-honour-course/deep-learning-neural-networks/" class="layer-link"
+                  aria-label="Course Details, Application of Deep Learning and Neural Network" target="_blank"></a>
+
+              </div>
+            </li>
+
+            <li class="card-container">
+              <div class="card course-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/Data Analytics and Reporting.webp" width="370" height="248" loading="lazy"
+                    alt="Data Analytics and Reporting" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="wrapper">
+
+                    <p class="title-lg card-price">$72.39</p>
+
+                    <div class="rating-wrapper">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                    </div>
+
+                  </div>
+
+                  <h3 class="title-lg card-title">
+                    Data Analytics and Reporting
+                  </h3>
+
+                  <div class="card-meta wrapper">
+
+                    <p class="title-sm">
+                      <img src="./assets/images/file-outline.svg" width="20" height="20" loading="lazy" alt="">
+
+                      <span class="span">2 Lessons</span>
+                    </p>
+
+                    <p class="title-sm">
+                      <img src="./assets/images/user-outline.svg" width="20" height="20" loading="lazy" alt="">
+
+                      <span class="span">4k Students</span>
+                    </p>
+
+                  </div>
+
+                </div>
+
+                <a href="https://www.tcsion.com/courses/industry-honour-course/data-analytics-and-reporting/" class="layer-link"
+                  aria-label="Course Details, Data Analytics and Reporting" target="_blank"></a>
+
+              </div>
+            </li>
+
+            <li class="card-container">
+              <div class="card course-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/Natural Language Processing.webp" width="370" height="248" loading="lazy"
+                    alt="Natural Language Processing" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="wrapper">
+
+                    <p class="title-lg card-price">$80.95</p>
+
+                    <div class="rating-wrapper">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                    </div>
+
+                  </div>
+
+                  <h3 class="title-lg card-title">
+                    Natural Language Processing
+                  </h3>
+
+                  <div class="card-meta wrapper">
+
+                    <p class="title-sm">
+                      <img src="./assets/images/file-outline.svg" width="20" height="20" loading="lazy" alt="">
+
+                      <span class="span">2 Lessons</span>
+                    </p>
+
+                    <p class="title-sm">
+                      <img src="./assets/images/user-outline.svg" width="20" height="20" loading="lazy" alt="">
+
+                      <span class="span">4k Students</span>
+                    </p>
+
+                  </div>
+
+                </div>
+
+                <a href="https://www.tcsion.com/courses/industry-honour-course/natural-language-processing/" class="layer-link"
+                  aria-label="Course Details, Natural Language Processing" target="_blank"></a>
+
+              </div>
+            </li>
+
+            <li class="card-container">
+              <div class="card course-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/course-6.png" width="370" height="248" loading="lazy"
+                    alt="TCS iON NQT - IT" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="wrapper">
+
+                    <p class="title-lg card-price">$85.85</p>
+
+                    <div class="rating-wrapper">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                      <img src="./assets/images/star-fill.svg" width="16" height="16" loading="lazy" alt="">
+                    </div>
+
+                  </div>
+
+                  <h3 class="title-lg card-title">
+                    TCS iON NQT - IT
+                  </h3>
+
+                  <div class="card-meta wrapper">
+
+                    <p class="title-sm">
+                      <img src="./assets/images/file-outline.svg" width="20" height="20" loading="lazy" alt="">
+
+                      <span class="span">2 Lessons</span>
+                    </p>
+
+                    <p class="title-sm">
+                      <img src="./assets/images/user-outline.svg" width="20" height="20" loading="lazy" alt="">
+
+                      <span class="span">4k Students</span>
+                    </p>
+
+                  </div>
+
+                </div>
+                
+                <a href="https://www.tcsion.com/hub/national-qualifier-test/it-career-readiness-pack/" class="layer-link" 
+                aria-label="Course Details, TCS iON NQT - IT" target="_blank"></a>
+                <!-- <a href="#" class="layer-link"
+                  aria-label="Course Details, TCS iON NQT - IT"></a> -->
+
+              </div>
+            </li>
+
+          </ul>
+
+          <a href="#" class="btn btn-primary">View All Courses</a>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="cta" aria-labelledby="cta-label">
+        <div class="container">
+
+          <h2 class="headline-md section-title" id="cta-label">
+            Education Is About Creating Leaders For Tomorrow
+          </h2>
+
+          <a href="#" class="btn btn-tertiary">Register Today</a>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer has-bg-image" style="background-image: url('./assets/images/footer-bg.png')">
+
+    <div class="section footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/TCS iON Logo Vector.svg" width="145" height="27" alt="TCS-ION home">
+          </a>
+
+          <p class="title-sm footer-text">
+            Lorem ipsum amet, consectetur adipiscing elit. Suspendis varius enim eros elementum tristique. Duis cursus.
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <img src="./assets/images/facebook.svg" width="40" height="40" loading="lazy" alt="facebook">
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <img src="./assets/images/twitter.svg" width="40" height="40" loading="lazy" alt="twitter">
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <img src="./assets/images/pinterest.svg" width="40" height="40" loading="lazy" alt="pinterest">
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <img src="./assets/images/instagram.svg" width="40" height="40" loading="lazy" alt="instagram">
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="headline-sm footer-list-title">Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="title-sm footer-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#blog" class="title-sm footer-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="title-sm footer-link">Pricing</a>
+          </li>
+
+          <li>
+            <a href="#course" class="title-sm footer-link">Courses</a>
+          </li>
+
+          <!-- <li>
+            <a href="#" class="title-sm footer-link">Contact Us</a>
+          </li> -->
+
+          <li class="navbar-item">
+            <a href="https://cdn4.tcsion.com/dotcom/appshub/SupportServices/support_service.html" class="title-sm footer-link" target="_blank">Contacts Us</a>
+          </li>
+          
+
+          <li>
+            <a href="#" class="title-sm footer-link">Blog</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="headline-sm footer-list-title">Legal</p>
+          </li>
+
+          <li>
+            <a href="#" class="title-sm footer-link">Legal</a>
+          </li>
+
+          <li>
+            <a href="#" class="title-sm footer-link">Tearms of Use</a>
+          </li>
+
+          <li>
+            <a id="terms-link" href="#" class="title-sm footer-link">Tearm & Condition</a>
+          </li>
+
+          <li>
+            <a href="#" class="title-sm footer-link">Payment Method</a>
+          </li>
+
+          <li>
+            <a href="#" class="title-sm footer-link">Privacy Policy</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+
+            <p class="headline-sm footer-list-title">Images</p>
+
+            <ul class="grid-list">
+
+              <li>
+                <img src="./assets/images/ins-1.png" width="80" height="80" loading="lazy" alt="instagram post"
+                  class="img-cover">
+              </li>
+
+              <li>
+                <img src="./assets/images/ins-2.png" width="80" height="80" loading="lazy" alt="instagram post"
+                  class="img-cover">
+              </li>
+
+              <li>
+                <img src="./assets/images/ins-3.png" width="80" height="80" loading="lazy" alt="instagram post"
+                  class="img-cover">
+              </li>
+
+              <li>
+                <img src="./assets/images/ins-4.png" width="80" height="80" loading="lazy" alt="instagram post"
+                  class="img-cover">
+              </li>
+
+              <li>
+                <img src="./assets/images/ins-5.png" width="80" height="80" loading="lazy" alt="instagram post"
+                  class="img-cover">
+              </li>
+
+              <li>
+                <img src="./assets/images/ins-6.png" width="80" height="80" loading="lazy" alt="instagram post"
+                  class="img-cover">
+              </li>
+
+            </ul>
+
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          © Copyright 2024 | TCS-ION | All Rights Reserved by TCS_ION Pune.
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+   - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
+
+
+
